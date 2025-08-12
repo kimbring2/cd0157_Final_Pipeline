@@ -45,6 +45,8 @@ phases:
 
   post_build:
     commands:
+      - echo $REPOSITORY_URI
+      - echo $TAG
       - docker push $REPOSITORY_URI:$TAG
       - echo $EKS_CLUSTER_NAME
       - echo $EKS_KUBECTL_ROLE_ARN
